@@ -3,18 +3,18 @@ import time
 import threading
 
 # creating a socket
-# AF_INET : Address familt IPv4
+# AF_INET : Address family IPv4
 # SOCK_DGRAM : Connectionless Protocol i.e UDP (User Datagram Protocol)
 s= socket.socket( socket.AF_INET, socket.SOCK_DGRAM)
 
-ip = input(" Enter your IP: ")
-port = input( "Enter port no. you want to run this server on")
+ip = input("Enter your IP: ")
+port = int(input( "Enter port no.: "))
 
 # binding the port/address to the socket 
 s.bind(( ip, port ))
 
 ip_server= input(" Enter server side IP: ")
-port_server= input(" Enter port no.")
+port_server= int(input(" Enter port no."))
 def receive():
     while True:
         response=s.recvfrom(1024)     

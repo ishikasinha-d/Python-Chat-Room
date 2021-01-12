@@ -7,8 +7,8 @@ import threading
 # SOCK_DGRAM : Connectionless Protocol i.e UDP (User Datagram Protocol)
 s= socket.socket( socket.AF_INET, socket.SOCK_DGRAM)
 
-ip = input(" Enter server side IP: ")
-port = input( "Enter port no. you want to run this server on")
+ip = input("Enter server side IP: ")
+port = int(input( "Enter port no. : "))
 
 # binding the port/address to the socket 
 s.bind(( ip, port ))
